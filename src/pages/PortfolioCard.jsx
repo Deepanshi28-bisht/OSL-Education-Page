@@ -12,7 +12,9 @@ const PortfolioCard = ({img,heading}) => {
            <span className='text-xs tracking-[6%] leading-[110%] font-bold uppercase text-[var(--color-sky)]'>Case Study</span>
        <Heading4>{heading}</Heading4>
        </div>
-       <PrimaryButton/>
+       <PrimaryButton>
+        Read More
+       </PrimaryButton>
        </div>
     </div>
   )

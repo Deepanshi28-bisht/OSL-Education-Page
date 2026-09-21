@@ -2,7 +2,7 @@ import { footerNav } from '../components/data/navLink'
 import Heading6 from '../components/Typography/Heading6'
 const FooterContent = () => {
   return (
-     <div className='flex gap-8 items-start justify-center w-full'>
+     <div className='flex gap-8 flex-col md:flex-row items-start  justify-start w-full'>
 
         {
      footerNav.map((item)=>(

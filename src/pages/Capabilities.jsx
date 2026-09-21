@@ -5,13 +5,13 @@ import CapabilitiesContent from './CapabilitiesContent'
 import edtechImg from "../../public/assets/edtech-img.png"
 const Capabilities = () => {
     return (
-        <section className='py-20'>
+        <section className='py-20 px-4 lg:px-0'>
             <Container>
                 <div className='flex flex-col gap-15 items-start justify-center'>
                     <Heading3>
                         Building for an Intelligent Learning Future.
                     </Heading3>
-                    <div className='flex justify-between items-start w-full'>
+                    <div className='flex justify-between items-start flex-col md:flex-row w-full'>
                         <div className='flex flex-col gap-8 items-start w-full'>
                             <CapabilitiesContent
                                 heading="Modular & Scalable Foundations"

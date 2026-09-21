@@ -8,7 +8,7 @@ import Heading3 from '../components/Typography/Heading3'
 import ContentDeliveryContent from './ContentDeliveryContent'
 const ContentDelivery = () => {
     return (
-        <section className='py-20'>
+        <section className='py-20 px-4 lg:px-0'>
             <Container>
                 <div className='flex flex-col gap-15 items-start'>
                     <Heading3>

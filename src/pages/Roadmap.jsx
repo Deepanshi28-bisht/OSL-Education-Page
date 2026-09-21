@@ -6,9 +6,9 @@ import arrow from "../../public/assets/right-arrow.png";
 import { Button } from 'antd';
 const Roadmap = () => {
     return (
-        <section className='py-30 bg-[var(--color-black)]'>
+        <section className='px-6 py-20 lg:py-30 lg:px-0 bg-[var(--color-black)]'>
             <Container>
-                <div className='flex flex-col gap-12 items-start'>
+                <div className='flex flex-col gap-12 items-center lg:items-start'>
                     <div className='flex flex-col gap-4 items-start'>
                       <Heading3 classname="text-[var(--color-white)]">Build Your EdTech Roadmap with OpenSense Labs.</Heading3>
                       <Paragraph classname="text-[var(--color-white)] text-start opacity-[70%]">Let’s identify the high-impact gaps in your current learning platform. Get a 30-minute infrastructure audit to identify bottlenecks in your student journey.</Paragraph>

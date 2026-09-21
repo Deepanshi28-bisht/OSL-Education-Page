@@ -8,10 +8,10 @@ import { Button } from 'antd'
 import arrow from "../../public/assets/right-arrow.png";
 const Launchpad = () => {
     return (
-        <section className='py-20'>
+        <section className='py-20 px-4 lg:px-0'>
             <Container>
                 <div className='flex flex-col items-center justify-center gap-15'>
-                    <div className='flex items-center justify-center gap-15'>
+                    <div className='flex items-center justify-center gap-15 flex-col md:flex-row'>
                         <div className='w-full max-w-[570px'>
                             <img src={meetingImg} alt="meeting-img" className='h-full w-full' />
                         </div>
@@ -20,7 +20,7 @@ const Launchpad = () => {
                             <Paragraph classname="text-[var(--color-black)] opacity-[70%] text-start">We fast-track your platform launch with a curated set of ready-to-deploy capabilities designed to eliminate build time and maximize impact from day one.</Paragraph>
                         </div>
                     </div>
-                    <div className='flex items-center justify-center gap-15'>
+                    <div className='flex items-center justify-center gap-15 flex-col md:flex-row'>
                         <LaunchpadContent
                             header="AI-First Learning Engine"
                             para="Built-in AI to generate videos, create and evaluate quizzes, and enhance learning, reducing effort and boosting efficiency."

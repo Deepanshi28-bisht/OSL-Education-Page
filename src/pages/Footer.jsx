@@ -4,10 +4,10 @@ import FooterContent from './FooterContent'
 import Caption from '../components/Typography/Caption'
 const Footer = () => {
   return (
-    <footer className='pt-25 pb-20 bg-[#EBF0F0]'>
+    <footer className='pt-20 pb-20 px-4 lg:px-0 lg:pt-25 lg:pb-20 bg-[#EBF0F0]'>
      <Container>
         <div className='flex flex-col gap-15 items-center justify-center w-full'>
-              <div className='flex gap-20 items-start justify-center w-full'>
+              <div className='flex gap-20 items-start justify-center w-full flex-col lg:flex-row'>
                     <div className='flex flex-col gap-[39px] items-start justify-start'>
                       <div className='w-full max-w-[160px]'>
                        <img src={footerLogo} alt="osl-logo" className='w-full h-full' />
@@ -41,11 +41,11 @@ const Footer = () => {
                     </div>
                        <FooterContent/>
               </div>
-              <div className='flex items-start justify-between w-full pt-15 border-t border-[var(--color-black)]/10'>
+              <div className='flex items-start gap-6 md:gap-0 md:justify-between w-full pt-15 border-t border-[var(--color-black)]/10 flex-col md:flex-row'>
                 <Caption className="text-nowrap">
                     © 2026 OpenSense Labs. All Rights Reserved.
                 </Caption>
-                <div className='flex items-start justify-end gap-6 flex-wrap'>
+                <div className='flex items-start md:justify-end gap-6 flex-wrap'>
                     <Caption> Data Protection </Caption>
                     <Caption> GDPR Compliance </Caption>
                     <Caption> User Agreement </Caption>

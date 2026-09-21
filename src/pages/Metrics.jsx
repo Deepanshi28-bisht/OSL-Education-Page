@@ -5,13 +5,13 @@ import MetricsContent from './MetricsContent'
 
 const Metrics = () => {
   return (
-   <section className='py-30 bg-[#EBF0F0]'>
+   <section className='py-20 px-4 lg:py-30 lg:px-0 bg-[#EBF0F0]'>
    <Container>
     <div className='flex flex-col gap-15 items-start justify-center'>
     <Heading3>
         Real Impact: How We Helped LMS Scale.
     </Heading3>
-    <div className='flex gap-10 items-center justify-center'>
+    <div className='flex gap-10 items-center justify-center flex-wrap'>
       <MetricsContent
       className="border-[#E30C12]"
       header="15000+"
