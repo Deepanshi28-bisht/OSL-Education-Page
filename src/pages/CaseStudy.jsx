@@ -8,7 +8,7 @@ const CaseStudy = () => {
   return (
   <section className='pt-15 pb-15 px-4 md:pt-30 md:pb-10 lg:px-0'>
      <Container>
-        <div className='flex flex-col gap-10 items-center justify-center'>
+        <div className='flex flex-col gap-10 items-center justify-center group'>
           <div className='flex flex-col gap-[10px] items-start justify-center w-full'>
            <span className='text-xs tracking-[6%] leading-[110%] font-bold uppercase text-[var(--color-sky)] '>Case Study</span>
            <Heading3>
@@ -16,8 +16,8 @@ const CaseStudy = () => {
            </Heading3>
           </div>
            <div className='flex flex-col gap-8 lg:gap-10 items-center justify-center'>
-              <div className='hidden md:block'>
-                <img src={caseStudyImg} alt="case-study-img" className='h-full w-full' />
+              <div className='hidden md:block overflow-hidden rounded-4xl'>
+                <img src={caseStudyImg} alt="case-study-img" className='h-full w-full object-cover transition-transform duration-300 ease-in-out group-hover:duration-500 group-hover:scale-105' />
               </div>
               <div className='md:hidden block w-full max-w-[358px]'>
                 <img src={caseStudyImgMobile} alt="case-study-img" className='h-full w-full' />

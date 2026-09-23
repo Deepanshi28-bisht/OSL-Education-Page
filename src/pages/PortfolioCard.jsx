@@ -3,9 +3,9 @@ import Heading4 from "../components/Typography/Heading4"
 
 const PortfolioCard = ({img,heading}) => {
   return (
-    <div className='flex flex-col gap-8 items-stretch justify-center w-full max-w-[360px]'>
-     <div className='w-full max-w-[360px]'>
-     <img src={img} alt="card-img" />
+    <div className='group flex flex-col gap-8 items-stretch justify-center w-full max-w-[360px] group'>
+     <div className='w-full max-w-[360px] overflow-hidden rounded-2xl'>
+     <img src={img} alt="card-img" className="transition-transform duration-300 ease-in-out group-hover:scale-105" />
      </div>
      <div className="flex flex-col gap-6 items-start justify-center">
         <div className="flex flex-col gap-3 items-start justify-center">

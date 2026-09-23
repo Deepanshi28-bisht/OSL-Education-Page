@@ -14,7 +14,7 @@ const ServicesPanel = ({data}) => {
                 <li key={item}>
                     <a
                 href="#"
-                className="text-base text-[var(--color-black)] leading-[1.2] font-normal"
+                className="text-base text-[var(--color-black)] leading-[1.2] font-light"
               >
                 {item}
               </a>
@@ -31,7 +31,7 @@ const ServicesPanel = ({data}) => {
                 <li key={item}>
                     <a
                 href="#"
-                className="text-base text-[var(--color-black)] leading-[1.2] font-normal"
+                className="text-base text-[var(--color-black)] leading-[1.2] font-light"
               >
                 {item}
               </a>
@@ -48,7 +48,7 @@ const ServicesPanel = ({data}) => {
                 <li key={item}>
                     <a
                 href="#"
-                className="text-base text-[var(--color-black)] leading-[1.2] font-normal"
+                className="text-base text-[var(--color-black)] font-light leading-[1.2]"
               >
                 {item}
               </a>
@@ -57,7 +57,7 @@ const ServicesPanel = ({data}) => {
         }
     </ul>
       </div>
-       <div>
+       <div className='pl-10 border-l border-[#ccc]'>
         <Heading6 className="mb-6">BY INDUSTRY</Heading6>
         <ul className='flex flex-col gap-5 items-start'>
         {
@@ -65,7 +65,7 @@ const ServicesPanel = ({data}) => {
                 <li key={item.id}>
                     <a
                 href="#"
-                className="text-base text-[var(--color-black)] leading-[1.2] font-normal flex gap-3 items-center"
+                className="text-base text-[var(--color-black)] font-light leading-[1.2] flex gap-3 items-center"
               >
               <i class="fa-brands fa-leanpub text-4xl"></i>
               <span>{item.name}</span>

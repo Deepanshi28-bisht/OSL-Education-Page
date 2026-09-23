@@ -46,14 +46,14 @@ const Footer = () => {
                     © 2026 OpenSense Labs. All Rights Reserved.
                 </Caption>
                 <div className='flex items-start md:justify-end gap-6 flex-wrap'>
-                    <Caption> Data Protection </Caption>
-                    <Caption> GDPR Compliance </Caption>
-                    <Caption> User Agreement </Caption>
-                    <Caption> Privacy Policy </Caption>
-                    <Caption> Terms of Service </Caption>
-                    <Caption> Cookie Policy </Caption>
-                    <Caption> Accessibility (WCAG 2.2) </Caption>
-                    <Caption> Impressium </Caption>
+                    <Caption className="hover:text-[var(--color-sky)] cursor-pointer"> Data Protection </Caption>
+                    <Caption className="hover:text-[var(--color-sky)] cursor-pointer"> GDPR Compliance </Caption>
+                    <Caption className="hover:text-[var(--color-sky)] cursor-pointer"> User Agreement </Caption>
+                    <Caption className="hover:text-[var(--color-sky)] cursor-pointer"> Privacy Policy </Caption>
+                    <Caption className="hover:text-[var(--color-sky)] cursor-pointer"> Terms of Service </Caption>
+                    <Caption className="hover:text-[var(--color-sky)] cursor-pointer"> Cookie Policy </Caption>
+                    <Caption className="hover:text-[var(--color-sky)] cursor-pointer"> Accessibility (WCAG 2.2) </Caption>
+                    <Caption className="hover:text-[var(--color-sky)] cursor-pointer"> Impressium </Caption>
                 </div>
               </div>
         </div>

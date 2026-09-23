@@ -3,7 +3,6 @@ import Heading4 from '../components/Typography/Heading4'
 import Paragraph from '../components/Typography/Paragraph'
 
 const ContentDeliveryContent = ({ icon, heading, para, classname }) => {
-    console.log("🚀 ~ ContentDeliveryContent ~ para:", para)
     return (
         <div className={`w-full max-w-[373px] p-6 md:p-8 text-center flex flex-col gap-6 items-center justify-center bg-[#F8F8F8] md:bg-transparent group hover:bg-[#F8F8F8] rounded-lg ${classname}`}>
             <img src={icon} alt="icon" className='h-14 w-14' />
