@@ -58,19 +58,19 @@ const Header = () => {
         }
     }, [])
     useEffect(() => {
-  if (mobileOpen) {
-    document.body.style.overflow = "hidden";
-    document.body.style.touchAction = "none";
-  } else {
-    document.body.style.overflow = "";
-    document.body.style.touchAction = "";
-  }
+        if (mobileOpen) {
+            document.body.style.overflow = "hidden";
+            document.body.style.touchAction = "none";
+        } else {
+            document.body.style.overflow = "";
+            document.body.style.touchAction = "";
+        }
 
-  return () => {
-    document.body.style.overflow = "";
-    document.body.style.touchAction = "";
-  };
-}, [mobileOpen]);
+        return () => {
+            document.body.style.overflow = "";
+            document.body.style.touchAction = "";
+        };
+    }, [mobileOpen]);
     return (
         <>
             <header className="w-full sticky top-0 z-60 bg-[var(--bg-color)]" ref={menuRef}>
@@ -101,11 +101,17 @@ const Header = () => {
                                 langOpen && (
                                     <div className="absolute top-full right-0 mt-3 bg-white rounded-2xl shadow-xl p-7">
                                         <div className="flex flex-col gap-4 items-center justify-center">
-                                            <button className={`flex gap-2 text-sm items-center justify-center py-2 px-6 rounded-full  ${lang === "en" ? "text-[#0052cc] font-bold border-2 border-[#0052cc]" : "text-[var(--color-black)] border border-[#ccc]"}`} onClick={() => setLang("en")}>
+                                            <button className={`flex gap-2 text-sm items-center justify-center py-2 px-6 rounded-full  ${lang === "en" ? "text-[#0052cc] font-bold border-2 border-[#0052cc]" : "text-[var(--color-black)] border border-[#ccc]"}`} onClick={() => {
+                                                setLang("en")
+                                                setLangOpen(false)
+                                            }}>
                                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_5188_42420)"><path d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z" fill="#F0F0F0"></path><path d="M2.06718 3.91089C1.28167 4.93288 0.689365 6.11081 0.344482 7.39046H5.54675L2.06718 3.91089Z" fill="#0052B4"></path><path d="M19.6558 7.39042C19.3109 6.11081 18.7186 4.93288 17.9331 3.91089L14.4536 7.39042H19.6558Z" fill="#0052B4"></path><path d="M0.344482 12.6086C0.689404 13.8883 1.28171 15.0662 2.06718 16.0881L5.54663 12.6086H0.344482Z" fill="#0052B4"></path><path d="M16.0879 2.06649C15.0659 1.28098 13.888 0.688672 12.6084 0.34375V5.54598L16.0879 2.06649Z" fill="#0052B4"></path><path d="M3.91162 17.9314C4.93361 18.7169 6.11155 19.3092 7.39116 19.6541V14.4519L3.91162 17.9314Z" fill="#0052B4"></path><path d="M7.39111 0.34375C6.1115 0.688672 4.93357 1.28098 3.91162 2.06644L7.39111 5.54593V0.34375Z" fill="#0052B4"></path><path d="M12.6084 19.6541C13.888 19.3092 15.0659 18.7169 16.0879 17.9314L12.6084 14.4519V19.6541Z" fill="#0052B4"></path><path d="M14.4536 12.6086L17.9331 16.0882C18.7186 15.0662 19.3109 13.8882 19.6558 12.6086H14.4536Z" fill="#0052B4"></path><path d="M19.9154 8.69566H11.3044H11.3044V0.0846484C10.8774 0.0290625 10.4421 0 10 0C9.55785 0 9.12262 0.0290625 8.69566 0.0846484V8.69559V8.69563H0.0846484C0.0290625 9.12262 0 9.55793 0 10C0 10.4421 0.0290625 10.8774 0.0846484 11.3043H8.69559H8.69563V19.9154C9.12262 19.9709 9.55785 20 10 20C10.4421 20 10.8774 19.971 11.3043 19.9154V11.3044V11.3044H19.9154C19.9709 10.8774 20 10.4421 20 10C20 9.55793 19.9709 9.12262 19.9154 8.69566Z" fill="#D80027"></path><path d="M12.6086 12.6094L17.071 17.0718C17.2762 16.8666 17.472 16.6521 17.6588 16.4298L13.8384 12.6094H12.6086V12.6094Z" fill="#D80027"></path><path d="M7.39122 12.6094H7.39114L2.92883 17.0717C3.13399 17.2769 3.34848 17.4727 3.57083 17.6595L7.39122 13.839V12.6094Z" fill="#D80027"></path><path d="M7.3911 7.39093V7.39085L2.92876 2.92847C2.72352 3.13362 2.52774 3.34812 2.34094 3.57046L6.16137 7.39089H7.3911V7.39093Z" fill="#D80027"></path><path d="M12.6086 7.39175L17.071 2.92933C16.8659 2.72409 16.6514 2.52831 16.429 2.34155L12.6086 6.16198V7.39175V7.39175Z" fill="#D80027"></path></g><defs><clipPath id="clip0_5188_42420"><rect width="20" height="20" fill="white"></rect></clipPath></defs></svg>
                                                 <span>English</span>
                                             </button>
-                                            <button className={`flex gap-2 text-sm items-center justify-center py-2 px-6 rounded-full ${lang === "de" ? "text-[#0052cc] font-bold border-2 border-[#0052cc]" : "text-[var(--color-black)] border border-[#ccc]"}`} onClick={() => setLang("de")}>
+                                            <button className={`flex gap-2 text-sm items-center justify-center py-2 px-6 rounded-full ${lang === "de" ? "text-[#0052cc] font-bold border-2 border-[#0052cc]" : "text-[var(--color-black)] border border-[#ccc]"}`} onClick={() => {
+                                                setLang("de")
+                                                setLangOpen(false)
+                                            }}>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><g clip-path="url(#clip0_5216_50305)"><path d="M0.621826 13.4791C2.03476 17.2871 5.70018 20.0009 9.99983 20.0009C14.2995 20.0009 17.9649 17.2871 19.3778 13.4791L9.99983 12.6096L0.621826 13.4791Z" fill="#FFDA44"></path><path d="M9.99983 0.000732422C5.70018 0.000732422 2.03476 2.71448 0.621826 6.52249L9.99983 7.39202L19.3778 6.52245C17.9649 2.71448 14.2995 0.000732422 9.99983 0.000732422Z" fill="black"></path><path d="M0.621992 6.52148C0.220039 7.6048 0 8.77652 0 9.99973C0 11.2229 0.220039 12.3946 0.621992 13.478H19.378C19.78 12.3946 20 11.2229 20 9.99973C20 8.77652 19.78 7.6048 19.378 6.52148H0.621992Z" fill="#D80027"></path></g><defs><clipPath id="clip0_5216_50305"><rect width="20" height="20" fill="white"></rect></clipPath></defs></svg>
                                                 <span>Deutsch</span>
                                             </button>
